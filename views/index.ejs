@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<title>AppID - Change Password</title>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-mobile-web-app-title" content="AppID - Change Password"/>
+
+<style type="text/css">
+html, body{
+  text-align: center;
+  background-color: #fafafa;
+  font-size: 20px;
+  color: #333;
+}
+</style>
+<script>
+function logoutApp(){
+  location.href = '/appid/logout';
+}
+</script>
+</head>
+<body>
+
+<div class="container" style="text-align: right;">
+  <button class="btn btn-warning" onClick="logoutApp()">Logout</button>
+</div>
+
+<div class="container">
+  <ul>
+    <li>Sub: <%= user.sub %></li>
+    <li>Name: <%= user.name %></li>
+    <li>Email: <%= user.email %></li>
+  </ul>
+</div>
+
+</body>
+</html>
